@@ -99,9 +99,9 @@ public:
 		loadSource();
 		loadStation();
 		if (i["clean"]) {
-			removeDirectory(path + "/output");
+			removeDirectory(path + "/../output");
 		}
-		createDirectory(path + "/output");
+		createDirectory(path + "/../output");
 		if (this->i["nthread"] > 0) {
 			device::nthread = this->i["nthread"];
 		}

@@ -114,7 +114,7 @@ protected:
 			istr = "0" + istr;
 		}
 		int npt = (int) dim;
-		std::ofstream outfile(path + "/output/proc" + istr + "_" + comp + ".bin", std::ofstream::binary);
+		std::ofstream outfile(path + "/../output/proc" + istr + "_" + comp + ".bin", std::ofstream::binary);
 		outfile.write(reinterpret_cast<char*>(&npt), sizeof(int));
 		outfile.write(reinterpret_cast<char*>(data), npt * sizeof(float));
 		outfile.close();
