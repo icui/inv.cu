@@ -90,10 +90,10 @@ public:
 	map<string, int> i;
 	string path;
 	Config(map<string, string> &cfg) {
-		path = "projects/" + cfg["config"];
+		path = cfg["config"];
 		loadConfig(path, cfg);
 		if (cfg["inherit"].size()) {
-			loadConfig("projects/" + cfg["inherit"], cfg);
+			loadConfig(cfg["inherit"], cfg);
 		}
 		parseConfig(cfg);
 		loadSource();
